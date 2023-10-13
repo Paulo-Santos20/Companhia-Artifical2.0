@@ -5,8 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AI Getting Started",
-  description: "Help you setup an AI project with ease",
+  title: "Companhia Artificial 2.0",
+  description: "Companhia Artificial 2.0",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="pt">
         <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>

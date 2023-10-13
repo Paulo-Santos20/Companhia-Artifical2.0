@@ -61,7 +61,7 @@ class MemoryManager {
       const similarDocs = await vectorStore
         .similaritySearch(recentChatHistory, 3, { fileName: companionFileName })
         .catch((err) => {
-          console.log("WARNING: failed to get vector search results.", err);
+          console.log("AVISO: não foi possível obter os resultados da pesquisa vetorial.", err);
         });
       return similarDocs;
     } else {
@@ -78,7 +78,7 @@ class MemoryManager {
       const similarDocs = await vectorStore
         .similaritySearch(recentChatHistory, 3)
         .catch((err) => {
-          console.log("WARNING: failed to get vector search results.", err);
+          console.log("AVISO: não foi possível obter os resultados da pesquisa vetorial.", err);
         });
       return similarDocs;
     }
@@ -98,7 +98,7 @@ class MemoryManager {
 
   public async writeToHistory(text: string, companionKey: CompanionKey) {
     if (!companionKey || typeof companionKey.userId == "undefined") {
-      console.log("Companion key set incorrectly");
+      console.log("Chave complementar definida incorretamente");
       return "";
     }
 
